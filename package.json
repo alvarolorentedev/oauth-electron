@@ -1,0 +1,39 @@
+{
+  "name": "oauth-electron",
+  "version": "0.1.0",
+  "description": "easy oauth handlling for electron",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanekotic/oauth-electron.git"
+  },
+  "keywords": [
+    "facebook",
+    "oauth",
+    "login"
+  ],
+  "author": "kanekotic",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/kanekotic/oauth-electron/blob/master/LICENSE"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/kanekotic/oauth-electron/issues"
+  },
+  "devDependencies": {
+    "blanket": "^1.2.1",
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0"
+  },
+  "dependencies": {
+    "oauth": "^0.9.14",
+    "query-string": "^4.1.0"
+  }
+}
