@@ -79,7 +79,7 @@ the login function will return a Promise with the acces token and secret
 ```
 {
     oauth_access_token: ***,
-    oauth_access_token_secret: ***
+    oauth_refresh_token: ***
 }
 ```
 
