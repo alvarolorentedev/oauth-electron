@@ -1,9 +1,9 @@
 # ![drawing 1](https://cloud.githubusercontent.com/assets/3071208/14776049/cb6164ea-0ac3-11e6-8219-c8a46a56e3e5.png)
 [![Build Status](https://travis-ci.org/kanekotic/oauth-electron.svg?branch=master)](https://travis-ci.org/kanekotic/oauth-electron)
-[![Coverage Status](https://coveralls.io/repos/github/kanekotic/oauth-electron/badge.svg?branch=master)](https://coveralls.io/github/kanekotic/oauth-electron-facebook?branch=master)
-[![npm](https://img.shields.io/npm/dy/oauth-electron-facebook.svg)](https://github.com/kanekotic/oauth-electron-facebook)
-[![GitHub license](https://img.shields.io/github/license/kanekotic/oauth-electron-facebook.svg)](https://github.com/kanekotic/oauth-electron-facebook/blob/master/LICENSE)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/kanekotic/oauth-electron-facebook/graphs/commit-activity)
+[![Coverage Status](https://coveralls.io/repos/github/kanekotic/oauth-electron/badge.svg?branch=master)](https://coveralls.io/github/kanekotic/oauth-electron?branch=master)
+[![npm](https://img.shields.io/npm/dy/oauth-electron.svg)](https://github.com/kanekotic/oauth-electron)
+[![GitHub license](https://img.shields.io/github/license/kanekotic/oauth-electron.svg)](https://github.com/kanekotic/oauth-electron/blob/master/LICENSE)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/kanekotic/oauth-electron/graphs/commit-activity)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/kanekotic/)
 
 Use OAuth in a simple way inside your electron App.
