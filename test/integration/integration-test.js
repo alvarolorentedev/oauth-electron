@@ -22,12 +22,6 @@ describe('oauth electron', () => {
         await app.client.setValue('#email', process.env.FB_USERNAME)
         await app.client.setValue('#pass', process.env.FB_PASSWORD)
         await app.client.click('#loginbutton')
-        app.client.getMainProcessLogs().then(function (logs) {
-            logs.forEach(function (log) {
-              console.log(log)
-            })
-          })
-
         await app.client.waitUntilTextExists('#result', 'Success')
     });
 });
