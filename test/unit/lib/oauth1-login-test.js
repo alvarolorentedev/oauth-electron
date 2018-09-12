@@ -24,7 +24,9 @@ describe('login should', () => {
             }
         Oauth.mockImplementation(() => mockOauth)
         try {
-            let result = login(undefined, window)
+            let result = login({
+                authenticateUrl: faker.random.uuid(),
+            }, window)
             window.webContents.emit('close')
             await result
             expect(true).toBeFalsy()
@@ -77,7 +79,9 @@ describe('login should', () => {
                 getAccessToken: jest.fn(() => Promise.reject(err)) 
             }
         Oauth.mockImplementation(() => mockOauth)
-        let result = login(undefined, window)
+        let result = login({
+            authenticateUrl: faker.random.uuid(),
+        }, window)
         window.webContents.emit('will-navigate', undefined, authUrl)
         expect(result).rejects.toEqual(err)
     })
