@@ -44,7 +44,7 @@
     "spectron": "4.0.0"
   },
   "dependencies": {
-    "oauth": "0.9.14",
+    "oauth": "0.9.15",
     "query-string": "6.1.0"
   },
   "jest": {
