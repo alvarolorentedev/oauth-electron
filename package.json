@@ -1,6 +1,6 @@
 {
   "name": "oauth-electron",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "easy oauth generic handling for electron",
   "main": "index.js",
   "scripts": {
