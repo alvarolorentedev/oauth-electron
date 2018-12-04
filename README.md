@@ -29,7 +29,6 @@ let info = {
     version: ***,
     authCallback: ***,
     signatureMethod: ***,
-    responseType: ***, //this is optional if not provided it will default to 'code'
 },
 window = new BrowserWindow({webPreferences: {nodeIntegration: false}});
 
@@ -56,7 +55,8 @@ let info = {
     baseSite: ***,
     authorizePath: ***,
     accessTokenPath: ***,
-    redirectUrl: ***
+    redirectUrl: ***,
+    responseType: ***, //this is optional if not provided it will default to 'code'
 },
 window = new BrowserWindow({webPreferences: {nodeIntegration: false}});
 

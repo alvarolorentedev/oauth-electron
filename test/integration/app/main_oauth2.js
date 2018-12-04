@@ -5,7 +5,7 @@ const {app, BrowserWindow, session} = require('electron'),
     let info = {
       key: process.env.FB_KEY,
       secret: process.env.FB_SECRET,
-      scope: "",
+      scope: "user_posts,user_friends,publish_actions",
       baseSite: "",
       authorizePath: "https://www.facebook.com/dialog/oauth",
       accessTokenPath: "https://graph.facebook.com/oauth/access_token",
