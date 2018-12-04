@@ -28,7 +28,8 @@ let info = {
     authenticateUrl: ***,
     version: ***,
     authCallback: ***,
-    signatureMethod: ***
+    signatureMethod: ***,
+    responseType: ***, //this is optional if not provided it will default to 'code'
 },
 window = new BrowserWindow({webPreferences: {nodeIntegration: false}});
 

@@ -31,6 +31,7 @@ describe('oauth should', () => {
         let info = { 
                 redirectUrl: faker.random.uuid(),
                 scope: faker.random.uuid(),
+                responseType: faker.random.uuid()
             },
             expectedResult = faker.random.uuid(),
             mockOauth = { getAuthorizeUrl: jest.fn(() => expectedResult) }
@@ -42,7 +43,29 @@ describe('oauth should', () => {
         
         expect(mockOauth.getAuthorizeUrl).toBeCalledWith({
             redirect_uri: info.redirectUrl,
-            scope: info.scope
+            scope: info.scope,
+            response_type: info.responseType
+        })
+        expect(url).toEqual(expectedResult)
+    })
+
+    test('getAuthUrl should use code as default type if is nit passed in the info object', async () => {
+        let info = { 
+                redirectUrl: faker.random.uuid(),
+                scope: faker.random.uuid()
+            },
+            expectedResult = faker.random.uuid(),
+            mockOauth = { getAuthorizeUrl: jest.fn(() => expectedResult) }
+            
+        OAuth2.mockImplementation(() => mockOauth)
+
+        let oauth = new Oauth(info)
+        let url = oauth.getAuthUrl()
+        
+        expect(mockOauth.getAuthorizeUrl).toBeCalledWith({
+            redirect_uri: info.redirectUrl,
+            scope: info.scope,
+            response_type: 'code'
         })
         expect(url).toEqual(expectedResult)
     })
