@@ -71,6 +71,13 @@ the login function will return a Promise with the access token and secret
     refreshToken: ***
 }
 ```
+
+## Security
+
+Consider this before you integrate this library in your application:
+- It is a bad practice to hardcode `keys` & `secrets` in code that is going to be shipped.
+- If you are looking to have your own backend, consider using it for authentication with 3rd party services. [IETF RFC 8252](https://tools.ietf.org/html/rfc8252).
+
 ## Migration V0.x to V1.x
 
 - there is no more need for the oauth object, info becomes a basic object with the properties stated in the usage step.
