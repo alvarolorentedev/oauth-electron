@@ -75,16 +75,18 @@ describe('oauth should', () => {
             info = {
                 redirectUrl: faker.random.uuid(),
             },
-            accessToken = faker.random.uuid(),
-            refreshToken = faker.random.uuid(),
+            expected = {
+                accessToken: faker.random.uuid(),
+                other: faker.random.uuid()
+            },
             mockOauth = { 
-                getOAuthAccessToken: jest.fn((_,__,cb) => cb(undefined, accessToken,refreshToken)) 
+                getOAuthAccessToken: jest.fn((_,__,cb) => cb(undefined, undefined,undefined,expected)) 
             }
             
         OAuth2.mockImplementation(() => mockOauth)
 
         let oauth = new Oauth(info)
-        let result = oauth.getTokens(code)
+        let result = await oauth.getTokens(code)
         
         expect(mockOauth.getOAuthAccessToken).toBeCalledWith(
             code,
@@ -93,7 +95,7 @@ describe('oauth should', () => {
             },
             expect.anything()
         )
-        expect(result).resolves.toEqual({accessToken, refreshToken})
+        expect(result).toEqual(expected)
     })
 
     test('getTokens should reject if error', async () => {
@@ -105,9 +107,12 @@ describe('oauth should', () => {
         OAuth2.mockImplementation(() => mockOauth)
 
         let oauth = new Oauth({})
-        let result = oauth.getTokens("pepe")
-        
-        expect(result).rejects.toEqual(error)
+        try {
+            await oauth.getTokens("pepe")
+            fail()
+        } catch (e) {
+            expect(e).toEqual(error)
+        } 
     })
 
 })

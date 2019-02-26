@@ -1,6 +1,6 @@
 # ![drawing 1](https://cloud.githubusercontent.com/assets/3071208/14776049/cb6164ea-0ac3-11e6-8219-c8a46a56e3e5.png)
 [![Build Status](https://travis-ci.org/kanekotic/oauth-electron.svg?branch=master)](https://travis-ci.org/kanekotic/oauth-electron)
-[![Coverage Status](https://coveralls.io/repos/github/kanekotic/oauth-electron/badge.svg?branch=master)](https://coveralls.io/github/kanekotic/oauth-electron?branch=master)
+[![codecov](https://codecov.io/gh/kanekotic/oauth-electron/branch/master/graph/badge.svg)](https://codecov.io/gh/kanekotic/oauth-electron)
 [![npm](https://img.shields.io/npm/dy/oauth-electron.svg)](https://github.com/kanekotic/oauth-electron)
 [![GitHub license](https://img.shields.io/github/license/kanekotic/oauth-electron.svg)](https://github.com/kanekotic/oauth-electron/blob/master/LICENSE)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/kanekotic/oauth-electron/graphs/commit-activity)
@@ -47,6 +47,7 @@ the login function will return a Promise with the access token and secret
 
 ```js
 const login = require('oauth-electron')
+const { BrowserWindow, session } = require('electron')
 
 let info = {
     key: ***,
@@ -60,7 +61,7 @@ let info = {
 },
 window = new BrowserWindow({webPreferences: {nodeIntegration: false}});
 
-login.oauth2(info, window)
+login.oauth2(info, window, session)
 ```
 
 the login function will return a Promise with the access token and secret
@@ -68,7 +69,8 @@ the login function will return a Promise with the access token and secret
 ```
 {
     accessToken: ***,
-    refreshToken: ***
+    refreshToken?: ***,
+    <others: ***>
 }
 ```
 
@@ -77,6 +79,11 @@ the login function will return a Promise with the access token and secret
 Consider this before you integrate this library in your application:
 - It is a bad practice to hardcode `keys` & `secrets` in code that is going to be shipped.
 - If you are looking to have your own backend, consider using it for authentication with 3rd party services. [IETF RFC 8252](https://tools.ietf.org/html/rfc8252).
+
+## Migration V1.x to V2.x
+
+- Please refer to the response of the service, as there will probably be extra fields in the response
+- session is required to be passed as events of chromium have changed
 
 ## Migration V0.x to V1.x
 

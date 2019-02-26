@@ -2,7 +2,7 @@ const Application = require('spectron').Application
 const electronPath = require('electron'),
     path = require('path')
 
-describe.skip('oauth electron', () => {
+describe('oauth electron', () => {
     let app
     beforeAll(async () => {
         jest.setTimeout(10000)

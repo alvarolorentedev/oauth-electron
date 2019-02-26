@@ -10,8 +10,19 @@ const login = require('../../../lib/oauth2-login'),
     Oauth = require('../../../lib/oauth2')
 
 class TestEmitter extends EventEmitter {}
+class WebEmitter extends EventEmitter {
+    onCompleted(_, listener){
+        return super.on('Completed',listener)
+    }
+}
 
 describe('login should', () => {
+    const session = {
+        defaultSession:{
+            webRequest: new WebEmitter()
+        }
+    }
+
     beforeEach(() => {
         url.parse.mockClear()
         Oauth.mockClear()
@@ -29,7 +40,7 @@ describe('login should', () => {
             }
         Oauth.mockImplementation(() => mockOauth)
 
-        login(info, window)
+        login(info, window, session)
         
         expect(Oauth).toBeCalledWith(info)        
         expect(window.loadURL).toBeCalledWith(authUrl)
@@ -42,7 +53,9 @@ describe('login should', () => {
                 webContents: childEmitter
             }
         try {
-            let result = login(undefined, window)
+            let result = login({
+                redirectUrl: faker.random.uuid()
+            }, window, session)
             window.webContents.emit('close')
             await result
             expect(true).toBeFalsy()
@@ -75,8 +88,8 @@ describe('login should', () => {
 
         let result = login({
             redirectUrl: authUrl
-        }, window)
-        window.webContents.emit('did-get-redirect-request', undefined, undefined, authUrl)
+        }, window, session)
+        session.defaultSession.webRequest.emit('Completed', { url: authUrl })
         result = await result
         expect(url.parse).toBeCalledWith(authUrl, true)
         expect(mockOauth.getTokens).toBeCalledWith(parsed.query.code)
@@ -101,8 +114,8 @@ describe('login should', () => {
         try {
             let result = login({
                 redirectUrl: authUrl
-            }, window)
-            window.webContents.emit('did-get-redirect-request', undefined, undefined, authUrl)
+            }, window, session)
+            session.defaultSession.webRequest.emit('Completed', { url: authUrl })
             result = await result
             expect(true).toBeFalsy()
             
@@ -134,8 +147,8 @@ describe('login should', () => {
         try {
             let result = login({
                 redirectUrl: authUrl
-            }, window)
-            window.webContents.emit('did-get-redirect-request', undefined, undefined, authUrl)
+            }, window, session)
+            session.defaultSession.webRequest.emit('Completed', { url: authUrl })
             result = await result
             expect(true).toBeFalsy()
             

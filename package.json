@@ -9,7 +9,7 @@
     "test": "jest",
     "test:dev": "jest --watchAll test/unit",
     "test:int": "jest test/integration",
-    "test:cov": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test:cov": "jest --coverage && codecov",
     "push": "yarn test && git push",
     "deploy:major": "yarn version --major",
     "deploy:minor": "yarn version --minor",
@@ -37,7 +37,7 @@
     "url": "https://github.com/kanekotic/oauth-electron/issues"
   },
   "devDependencies": {
-    "coveralls": "3.0.2",
+    "codecov": "3.2.0",
     "electron": "4.0.5",
     "faker": "4.1.0",
     "jest": "24.1.0",
