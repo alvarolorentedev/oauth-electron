@@ -38,14 +38,14 @@
   },
   "devDependencies": {
     "codecov": "3.2.0",
-    "electron": "4.1.0",
+    "electron": "4.1.1",
     "faker": "4.1.0",
     "jest": "24.5.0",
     "spectron": "5.0.0"
   },
   "dependencies": {
     "oauth": "0.9.15",
-    "query-string": "6.3.0"
+    "query-string": "6.4.0"
   },
   "jest": {
     "testMatch": [
