@@ -1,7 +1,7 @@
 jest.mock('../../../lib/oauth1', () => jest.fn())
 
 const login = require('../../../lib/oauth1-login'),
-    faker = require('faker'),
+    { faker } = require('@faker-js/faker'),
     EventEmitter = require('events'),
     Oauth = require('../../../lib/oauth1')
 
@@ -25,7 +25,7 @@ describe('login should', () => {
         Oauth.mockImplementation(() => mockOauth)
         try {
             let result = login({
-                authenticateUrl: faker.random.uuid(),
+                authenticateUrl: faker.datatype.uuid(),
             }, window)
             window.webContents.emit('close')
             await result
@@ -43,15 +43,15 @@ describe('login should', () => {
                 webContents: childEmitter
             },
             authUrl = faker.internet.url(),
-            tokens = faker.random.uuid(),
-            token = faker.random.uuid(),
+            tokens = faker.datatype.uuid(),
+            token = faker.datatype.uuid(),
             mockOauth = { 
                 getRequestTokens: jest.fn(() => Promise.resolve({ token })),
                 getAccessToken: jest.fn(() => Promise.resolve({ tokens }))                
             },
             info = { 
-                authenticateUrl: faker.random.uuid(),
-                something: faker.random.uuid()
+                authenticateUrl: faker.datatype.uuid(),
+                something: faker.datatype.uuid()
              }
         Oauth.mockImplementation(() => mockOauth)
 
@@ -72,15 +72,15 @@ describe('login should', () => {
                 webContents: childEmitter
             },
             authUrl = faker.internet.url(),
-            token = faker.random.uuid(),
-            err = faker.random.uuid(),
+            token = faker.datatype.uuid(),
+            err = faker.datatype.uuid(),
             mockOauth = { 
                 getRequestTokens: jest.fn(() => Promise.resolve({ token })),
                 getAccessToken: jest.fn(() => Promise.reject(err)) 
             }
         Oauth.mockImplementation(() => mockOauth)
         let result = login({
-            authenticateUrl: faker.random.uuid(),
+            authenticateUrl: faker.datatype.uuid(),
         }, window)
         window.webContents.emit('will-navigate', undefined, authUrl)
         expect(result).rejects.toEqual(err)

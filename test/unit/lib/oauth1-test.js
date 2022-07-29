@@ -7,21 +7,21 @@ jest.mock('query-string', () => ({
 
 const Oauth = require('../../../lib/oauth1'),
     OAuth1 = require('oauth').OAuth,
-    faker = require('faker'),
+    { faker } = require('@faker-js/faker'),
     queryString = require('query-string')
 
 describe('oauth should', () => {
     test('construct using library', async () => {
         let info = { 
-                requestUrl: faker.random.uuid(),
-                accessUrl: faker.random.uuid(),
-                key: faker.random.uuid(),
-                secret: faker.random.uuid(),
-                version: faker.random.uuid(),
-                authCallback: faker.random.uuid(),
-                signatureMethod: faker.random.uuid(),
+                requestUrl: faker.datatype.uuid(),
+                accessUrl: faker.datatype.uuid(),
+                key: faker.datatype.uuid(),
+                secret: faker.datatype.uuid(),
+                version: faker.datatype.uuid(),
+                authCallback: faker.datatype.uuid(),
+                signatureMethod: faker.datatype.uuid(),
             },
-            expectedResult = { some: faker.random.uuid() }
+            expectedResult = { some: faker.datatype.uuid() }
             OAuth1.mockImplementation(() => expectedResult)
 
         let result = new Oauth(info)
@@ -39,8 +39,8 @@ describe('oauth should', () => {
     })
 
     test('getRequestTokens returns tokens', async () => {
-        let token = faker.random.uuid(),
-            tokenSecret = faker.random.uuid()
+        let token = faker.datatype.uuid(),
+            tokenSecret = faker.datatype.uuid()
         let oauthMockResult = { getOAuthRequestToken: jest.fn(cb => cb(undefined, token, tokenSecret)) }
         OAuth1.mockImplementation(() => oauthMockResult)
         let result = new Oauth({})
@@ -49,7 +49,7 @@ describe('oauth should', () => {
     })
 
     test('getRequestTokens returns rejection if error', async () => {
-        let error = faker.random.uuid()
+        let error = faker.datatype.uuid()
         let oauthMockResult = { getOAuthRequestToken: jest.fn(cb => cb(error, undefined, undefined)) }
         OAuth1.mockImplementation(() => oauthMockResult)
         let result = new Oauth({})
@@ -58,16 +58,16 @@ describe('oauth should', () => {
 
     test('getAuthTokens returns rejection if error', async () => {
         let request = {
-            token: faker.random.uuid(),
-            tokenSecret: faker.random.uuid()
+            token: faker.datatype.uuid(),
+            tokenSecret: faker.datatype.uuid()
         },
         resultTokens = {
-            token: faker.random.uuid(),
-            tokenSecret: faker.random.uuid()
+            token: faker.datatype.uuid(),
+            tokenSecret: faker.datatype.uuid()
         },
-        url = faker.random.uuid(),
+        url = faker.datatype.uuid(),
         query = {
-            oauth_verifier: faker.random.uuid()
+            oauth_verifier: faker.datatype.uuid()
         }
         oauthMockResult = { getOAuthAccessToken: jest.fn((_,__, ___,cb) => cb(undefined, resultTokens.token, resultTokens.tokenSecret)) }
         

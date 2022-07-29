@@ -3,18 +3,18 @@ jest.mock('oauth', () =>({
 }))
 const Oauth = require('../../../lib/oauth2'),
     OAuth2 = require('oauth').OAuth2,
-    faker = require('faker')
+    { faker } = require('@faker-js/faker')
 
 describe('oauth should', () => {
     test('construct using library', async () => {
         let info = { 
-                key: faker.random.uuid(),
-                secret: faker.random.uuid(),
-                baseSite: faker.random.uuid(),
-                authorizePath: faker.random.uuid(),
-                accessTokenPath: faker.random.uuid(),
+                key: faker.datatype.uuid(),
+                secret: faker.datatype.uuid(),
+                baseSite: faker.datatype.uuid(),
+                authorizePath: faker.datatype.uuid(),
+                accessTokenPath: faker.datatype.uuid(),
             },
-            expectedResult = { some: faker.random.uuid() }
+            expectedResult = { some: faker.datatype.uuid() }
         OAuth2.mockImplementation(() => expectedResult)
 
         let result = new Oauth(info)
@@ -29,11 +29,11 @@ describe('oauth should', () => {
 
     test('getAuthUrl should return authorization url', async () => {
         let info = { 
-                redirectUrl: faker.random.uuid(),
-                scope: faker.random.uuid(),
-                responseType: faker.random.uuid()
+                redirectUrl: faker.datatype.uuid(),
+                scope: faker.datatype.uuid(),
+                responseType: faker.datatype.uuid()
             },
-            expectedResult = faker.random.uuid(),
+            expectedResult = faker.datatype.uuid(),
             mockOauth = { getAuthorizeUrl: jest.fn(() => expectedResult) }
             
         OAuth2.mockImplementation(() => mockOauth)
@@ -51,10 +51,10 @@ describe('oauth should', () => {
 
     test('getAuthUrl should use code as default type if is nit passed in the info object', async () => {
         let info = { 
-                redirectUrl: faker.random.uuid(),
-                scope: faker.random.uuid()
+                redirectUrl: faker.datatype.uuid(),
+                scope: faker.datatype.uuid()
             },
-            expectedResult = faker.random.uuid(),
+            expectedResult = faker.datatype.uuid(),
             mockOauth = { getAuthorizeUrl: jest.fn(() => expectedResult) }
             
         OAuth2.mockImplementation(() => mockOauth)
@@ -71,13 +71,13 @@ describe('oauth should', () => {
     })
 
     test('getTokens should return tokens if no error', async () => {
-        let code = faker.random.uuid(),
+        let code = faker.datatype.uuid(),
             info = {
-                redirectUrl: faker.random.uuid(),
+                redirectUrl: faker.datatype.uuid(),
             },
             expected = {
-                accessToken: faker.random.uuid(),
-                other: faker.random.uuid()
+                accessToken: faker.datatype.uuid(),
+                other: faker.datatype.uuid()
             },
             mockOauth = { 
                 getOAuthAccessToken: jest.fn((_,__,cb) => cb(undefined, undefined,undefined,expected)) 
@@ -99,7 +99,7 @@ describe('oauth should', () => {
     })
 
     test('getTokens should reject if error', async () => {
-        let error = faker.random.uuid(),
+        let error = faker.datatype.uuid(),
         mockOauth = { 
             getOAuthAccessToken: jest.fn((_,__,cb) => cb(error, undefined, undefined)) 
         }
