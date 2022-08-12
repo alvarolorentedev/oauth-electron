@@ -37,9 +37,9 @@
     "url": "https://github.com/kanekotic/oauth-electron/issues"
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.3.0",
+    "@faker-js/faker": "^7.4.0",
     "codecov": "3.8.3",
-    "electron": "20.0.1",
+    "electron": "20.0.2",
     "jest": "28.1.3",
     "spectron": "19.0.0"
   },
