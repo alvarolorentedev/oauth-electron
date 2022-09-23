@@ -573,9 +573,9 @@
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
 "@sinclair/typebox@^0.24.1":
-  version "0.24.41"
-  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.41.tgz#45470b8bae32a28f1e0501066d0bacbd8b772804"
-  integrity sha512-TJCgQurls4FipFvHeC+gfAzb+GGstL0TDwYJKQVtTeSvJIznWzP7g3bAd5gEBlr8+bIxqnWS9VGVWREDhmE8jA==
+  version "0.24.42"
+  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.42.tgz#a74b608d494a1f4cc079738e050142a678813f52"
+  integrity sha512-d+2AtrHGyWek2u2ITF0lHRIv6Tt7X0dEHW+0rP+5aDCEjC3fiN2RBjrLD0yU0at52BcZbRGxLbAtXiR0hFCjYw==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
@@ -1101,9 +1101,9 @@ camelcase@^6.2.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001400:
-  version "1.0.30001400"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001400.tgz#3038bee70d8b875604cd8833cb0e5e254ee0281a"
-  integrity sha512-Mv659Hn65Z4LgZdJ7ge5JTVbE3rqbJaaXgW5LEI9/tOaXclfIZ8DW7D7FCWWWmWiiPS7AC48S8kf3DApSxQdgA==
+  version "1.0.30001409"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001409.tgz#6135da9dcab34cd9761d9cdb12a68e6740c5e96e"
+  integrity sha512-V0mnJ5dwarmhYv8/MzhJ//aW68UpvnQBXv8lJ2QUsvn2pHcmAuNtu8hQEDz37XnA1iE+lRR9CIfGWWpgJ5QedQ==
 
 chalk@^2.0.0:
   version "2.4.2"
@@ -1419,14 +1419,14 @@ electron-chromedriver@17.0.0:
     extract-zip "^2.0.0"
 
 electron-to-chromium@^1.4.251:
-  version "1.4.252"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.252.tgz#91d3064b7b4904debfd7726555517500b657e432"
-  integrity sha512-bwfkxPvK2PVbg+dXVFgoun+BkAyJmBPB0AqMTyQ/MzJsA/vEQoTi6Y1uWUDmo/IeOu2zvh4Ac6nfmFOWz5+oHg==
+  version "1.4.258"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.258.tgz#44c5456f487be082f038282fbcfd7b06ae99720d"
+  integrity sha512-vutF4q0dTUXoAFI7Vbtdwen/BJVwPgj8GRg/SElOodfH7VTX+svUe62A5BG41QRQGk5HsZPB0M++KH1lAlOt0A==
 
-electron@20.1.4:
-  version "20.1.4"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-20.1.4.tgz#d25b549f14376f99a0a239e27d67ef8515b4a5a0"
-  integrity sha512-7ov5kgSQi2JewV5SrVfjGasUvyScjuJrrDCW0rYxtP2SMe3JjoP4rsOOnh3ps2P/Nrdlbv+0ygiK0zp4ARCZ+A==
+electron@20.2.0:
+  version "20.2.0"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-20.2.0.tgz#f37074c8fe16ae88c322febf71f3a130013ca534"
+  integrity sha512-qw92PfXaC+fGoqJfQ2U5tVF8ux5HyVwgt1AxAtx6uz+dYcgtPBvfBN1jb+uzZVR+QVd+wCJ8Sqt6TD1ctwTauw==
   dependencies:
     "@electron/get" "^1.14.1"
     "@types/node" "^16.11.26"
@@ -1556,9 +1556,9 @@ fast-url-parser@^1.1.3:
     punycode "^1.3.2"
 
 fb-watchman@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/fb-watchman/-/fb-watchman-2.0.1.tgz#fc84fb39d2709cf3ff6d743706157bb5708a8a85"
-  integrity sha512-DkPJKQeY6kKwmuMretBhr7G6Vodr7bFwDYTXIkfG1gjvNpaxBTQV3PbXg6bR1c1UP4jPOX0jHUbbHANL9vRjVg==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/fb-watchman/-/fb-watchman-2.0.2.tgz#e9524ee6b5c77e9e5001af0f85f3adbb8623255c"
+  integrity sha512-p5161BqbuCaSnB8jIbzQHOlpgsPmK5rJVDfDKO91Axs5NC1uu3HRQm6wt9cd9/+GtQQIO53JdGXXoyDpTAsgYA==
   dependencies:
     bser "2.1.1"
 
