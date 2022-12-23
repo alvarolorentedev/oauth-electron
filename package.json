@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "oauth": "0.10.0",
-    "query-string": "8.0.3"
+    "query-string": "8.1.0"
   },
   "jest": {
     "testMatch": [
