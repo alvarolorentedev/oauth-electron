@@ -333,10 +333,10 @@
   resolved "https://registry.yarnpkg.com/@electron/remote/-/remote-2.0.4.tgz#c3dae436aed79d1b8adcefc5a4963c06750ad5d8"
   integrity sha512-8m2P/d2RH986PmMW5lKygbPEjEYJ7RgCe37Y8DQ1wujKMH6VjmLIB+Y+DP2SA611svCZc58TRSd8FraGvcfGZw==
 
-"@faker-js/faker@^8.2.0":
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/@faker-js/faker/-/faker-8.2.0.tgz#d4656d2cb485fe6ec4e7b340da9f16fac2c36c4a"
-  integrity sha512-VacmzZqVxdWdf9y64lDOMZNDMM/FQdtM9IsaOPKOm2suYwEatb8VkdHqOzXcDnZbk7YDE2BmsJmy/2Hmkn563g==
+"@faker-js/faker@^8.3.1":
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/@faker-js/faker/-/faker-8.3.1.tgz#7753df0cb88d7649becf984a96dd1bd0a26f43e3"
+  integrity sha512-FdgpFxY6V6rLZE9mmIBb9hM0xpfvQOSNOLnzolzKwsE1DH+gC7lEKV1p1IbR0lAYyvYd5a4u3qWJzowUkw1bIw==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
@@ -713,9 +713,9 @@
     "@types/node" "*"
 
 "@types/node@*":
-  version "20.9.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.9.0.tgz#bfcdc230583aeb891cf51e73cfdaacdd8deae298"
-  integrity sha512-nekiGu2NDb1BcVofVcEKMIwzlx4NjHlcjhoxxKBNLtz15Y1z7MYf549DFvkHSId02Ax6kGwWntIBPC3l/JZcmw==
+  version "20.9.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.9.1.tgz#9d578c610ce1e984adda087f685ace940954fe19"
+  integrity sha512-HhmzZh5LSJNS5O8jQKpJ/3ZcrrlG6L70hpGqMIAoM9YVD0YBRNWYsfwcXq8VnSjlNpCpgLzMXdiPo+dxcvSmiA==
   dependencies:
     undici-types "~5.26.4"
 
@@ -1124,9 +1124,9 @@ camelcase@^6.2.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001541:
-  version "1.0.30001561"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001561.tgz#752f21f56f96f1b1a52e97aae98c57c562d5d9da"
-  integrity sha512-NTt0DNoKe958Q0BE0j0c1V9jbUzhBxHIEJy7asmGrpE0yG63KTV7PLHPnK2E1O9RsQrQ081I3NLuXGS6zht3cw==
+  version "1.0.30001562"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001562.tgz#9d16c5fd7e9c592c4cd5e304bc0f75b0008b2759"
+  integrity sha512-kfte3Hym//51EdX4239i+Rmp20EsLIYGdPkERegTgU19hQWCRhsRFGKHTliUlsry53tv17K7n077Kqa0WJU4ng==
 
 chalk@^2.4.2:
   version "2.4.2"
@@ -1468,14 +1468,14 @@ electron-chromedriver@17.0.0:
     extract-zip "^2.0.0"
 
 electron-to-chromium@^1.4.535:
-  version "1.4.580"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.580.tgz#2f8f70f70733a6be1fb6f31de1224e6dc4bb196d"
-  integrity sha512-T5q3pjQon853xxxHUq3ZP68ZpvJHuSMY2+BZaW3QzjS4HvNuvsMmZ/+lU+nCrftre1jFZ+OSlExynXWBihnXzw==
+  version "1.4.586"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.586.tgz#68683163ed52a111213e2482ff847e76a5c6e891"
+  integrity sha512-qMa+E6yf1fNQbg3G66pHLXeJUP5CCCzNat1VPczOZOqgI2w4u+8y9sQnswMdGs5m4C1rOePq37EVBr/nsPQY7w==
 
-electron@27.0.4:
-  version "27.0.4"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-27.0.4.tgz#2666c61d0e14f470edb4d8ba7eb6c9171588e53a"
-  integrity sha512-ob29rN1mtiyAXzF8HsHd5jh8bYKd9OQDakfdOExi0F7epU97gXPHaj6JPjbBJ/vpki5d32SyKVePW4vxeNZk1A==
+electron@27.1.0:
+  version "27.1.0"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-27.1.0.tgz#d759885e552d7d926526cfc433ab312796f74a9a"
+  integrity sha512-XPdJiO475QJ8cx59/goWNNWnlV0vab+Ut3occymos7VDxkHV5mFrlW6tcGi+M3bW6gBfwpJocWMng8tw542vww==
   dependencies:
     "@electron/get" "^2.0.0"
     "@types/node" "^18.11.18"
