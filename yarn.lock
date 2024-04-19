@@ -1118,9 +1118,9 @@ camelcase@^6.2.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001587:
-  version "1.0.30001608"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001608.tgz#7ae6e92ffb300e4b4ec2f795e0abab456ec06cc0"
-  integrity sha512-cjUJTQkk9fQlJR2s4HMuPMvTiRggl0rAVMtthQuyOlDWuqHXqN8azLq+pi8B2TjwKJ32diHjUqRIKeFX4z1FoA==
+  version "1.0.30001611"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001611.tgz#4dbe78935b65851c2d2df1868af39f709a93a96e"
+  integrity sha512-19NuN1/3PjA3QI8Eki55N8my4LzfkMCRLgCVfrl/slbSAchQfV0+GwjPrK3rq37As4UCLlM/DHajbKkAqbv92Q==
 
 chalk@^2.4.2:
   version "2.4.2"
@@ -1462,14 +1462,14 @@ electron-chromedriver@17.0.0:
     extract-zip "^2.0.0"
 
 electron-to-chromium@^1.4.668:
-  version "1.4.734"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.734.tgz#6e0083e1a6be06b2df4c849ba1534d86f30a6738"
-  integrity sha512-pYfGUc+ll8AOzLbLC0lfgwkvCZIV+sKGuFFsSNuF3K3ujrmem8jIjg/t6DNq0J7biTSS1hCt/Hts0nmA3ZyprQ==
+  version "1.4.743"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.743.tgz#69a8cbaa72946b8c320e131e7bb8c2df86a6687a"
+  integrity sha512-AYgFmGUanfwZd4QmlGl9KBjoHRvJi6FUnbmfSr6NUk2JKCdHRHpljFGgxLp7L5h0p7uANrLzv0OgHo4TaCk4gA==
 
-electron@29.3.0:
-  version "29.3.0"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-29.3.0.tgz#8e65cb08e9c0952c66d3196e1b5c811c43b8c5b0"
-  integrity sha512-ZxFKm0/v48GSoBuO3DdnMlCYXefEUKUHLMsKxyXY4nZGgzbBKpF/X8haZa2paNj23CLfsCKBOtfc2vsEQiOOsA==
+electron@30.0.1:
+  version "30.0.1"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-30.0.1.tgz#2caf0eb7ed591b9b9842b522421bcae3aa8293d6"
+  integrity sha512-iwxkI/n2wBd29NH7TH0ZY8aWGzCoKpzJz+D10u7aGSJi1TV6d4MSM3rWyKvT/UkAHkTKOEgYfUyCa2vWQm8L0g==
   dependencies:
     "@electron/get" "^2.0.0"
     "@types/node" "^20.9.0"
